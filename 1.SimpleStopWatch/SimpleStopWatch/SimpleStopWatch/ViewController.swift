@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var timer:Timer?
-    var count = 0.0
+    var count:Float = 0.0
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         stopBtn.isEnabled = true
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [unowned self] (timer) in
             self.count += 0.1
-            self.timeLabel.text = String(self.count)
+            self.timeLabel.text = String.init(format: "%.1f",self.count)
         })
         animation(isStart: true)
     }
