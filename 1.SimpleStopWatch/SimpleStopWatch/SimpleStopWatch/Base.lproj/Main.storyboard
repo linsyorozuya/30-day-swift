@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-Gk-A6j">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdw-GD-6kC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="313.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.98958333333333337" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-Ke-LTw">
+                                        <rect key="frame" x="0.0" y="313.5" width="375" height="333.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7p-WB-HEz">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                                <color key="backgroundColor" red="0.17976459859999999" green="0.44868654009999998" blue="0.73100405930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="start">
+                                                    <color key="titleColor" red="0.98958333333333337" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startTimeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32O-yO-kdf"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flv-Nc-RGX">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="333.5"/>
+                                                <color key="backgroundColor" red="0.165122509" green="0.77031970019999996" blue="0.75200331210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="stop">
+                                                    <color key="titleColor" red="0.98958333333333337" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopTimeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FED-8r-RbO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="I7p-WB-HEz" secondAttribute="bottom" id="6Kc-au-rQf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Flv-Nc-RGX" secondAttribute="bottom" id="Go8-Zf-pHb"/>
+                                            <constraint firstItem="I7p-WB-HEz" firstAttribute="top" secondItem="BQt-Ke-LTw" secondAttribute="top" id="KBe-bC-lw6"/>
+                                            <constraint firstItem="Flv-Nc-RGX" firstAttribute="top" secondItem="BQt-Ke-LTw" secondAttribute="top" id="wqJ-VA-pD6"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sdw-GD-6kC" secondAttribute="trailing" id="I62-S8-8JJ"/>
+                                    <constraint firstItem="sdw-GD-6kC" firstAttribute="leading" secondItem="qrk-Gk-A6j" secondAttribute="leading" id="LEz-g7-TCg"/>
+                                    <constraint firstItem="BQt-Ke-LTw" firstAttribute="leading" secondItem="qrk-Gk-A6j" secondAttribute="leading" id="Yzk-WP-Xe7"/>
+                                    <constraint firstAttribute="trailing" secondItem="BQt-Ke-LTw" secondAttribute="trailing" id="abs-FD-NAz"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8A-7k-IRP">
+                                <rect key="frame" x="313" y="10" width="46" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.98958333333333337" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTimeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MD0-eG-XPK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32180652885980615" green="0.34973640000100897" blue="0.47489660978317261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qrk-Gk-A6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yqg-Tj-uLg"/>
+                            <constraint firstItem="qrk-Gk-A6j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bW3-Pn-z2p"/>
+                            <constraint firstItem="b8A-7k-IRP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="sEp-BI-kiP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qrk-Gk-A6j" secondAttribute="bottom" id="uLc-Ad-fOY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8A-7k-IRP" secondAttribute="trailing" constant="16" id="ula-w5-hMc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qrk-Gk-A6j" secondAttribute="trailing" id="w49-R5-s3F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="startBtn" destination="I7p-WB-HEz" id="fry-w9-NLy"/>
+                        <outlet property="stopBtn" destination="Flv-Nc-RGX" id="e44-Wa-AmJ"/>
+                        <outlet property="timeLabel" destination="sdw-GD-6kC" id="Gi9-B3-ARu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
