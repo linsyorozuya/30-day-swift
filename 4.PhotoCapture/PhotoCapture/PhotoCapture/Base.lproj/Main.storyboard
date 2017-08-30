@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="62f-pj-yad">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="OQc-vY-npJ">
+            <objects>
+                <viewController id="62f-pj-yad" customClass="ViewController" customModule="PhotoCapture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udg-yP-Lgf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j3X-G1-vMh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="547"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="x8k-lk-DZP">
+                                <rect key="frame" x="0.0" y="567" width="275" height="100"/>
+                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cmb-Do-Gnp"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-Tc-qmO">
+                                <rect key="frame" x="275" y="567" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.94891661410000006" green="0.9490789771" blue="0.94890636210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="50"/>
+                                <state key="normal" title="📷">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="62f-pj-yad" eventType="touchUpInside" id="eR8-Fb-AZk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97053721749999999" blue="0.88214886979999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x8k-lk-DZP" firstAttribute="top" secondItem="j3X-G1-vMh" secondAttribute="bottom" id="3tA-Qh-2e2"/>
+                            <constraint firstItem="j3X-G1-vMh" firstAttribute="top" secondItem="irM-2e-nR8" secondAttribute="top" id="57z-g7-5Qk"/>
+                            <constraint firstItem="irM-2e-nR8" firstAttribute="trailing" secondItem="x8k-lk-DZP" secondAttribute="trailing" constant="100" id="JQj-ps-OvB"/>
+                            <constraint firstItem="irM-2e-nR8" firstAttribute="bottom" secondItem="DoP-Tc-qmO" secondAttribute="bottom" id="JUc-TD-FgG"/>
+                            <constraint firstItem="x8k-lk-DZP" firstAttribute="bottom" secondItem="irM-2e-nR8" secondAttribute="bottom" id="KCl-ci-gxb"/>
+                            <constraint firstItem="DoP-Tc-qmO" firstAttribute="top" secondItem="j3X-G1-vMh" secondAttribute="bottom" id="eCA-v8-wA6"/>
+                            <constraint firstItem="DoP-Tc-qmO" firstAttribute="leading" secondItem="x8k-lk-DZP" secondAttribute="trailing" id="isQ-6B-c6O"/>
+                            <constraint firstItem="irM-2e-nR8" firstAttribute="trailing" secondItem="j3X-G1-vMh" secondAttribute="trailing" id="lH9-Dd-8Cg"/>
+                            <constraint firstItem="x8k-lk-DZP" firstAttribute="leading" secondItem="irM-2e-nR8" secondAttribute="leading" id="lre-25-d78"/>
+                            <constraint firstItem="irM-2e-nR8" firstAttribute="trailing" secondItem="DoP-Tc-qmO" secondAttribute="trailing" id="oe4-c9-NsM"/>
+                            <constraint firstItem="j3X-G1-vMh" firstAttribute="leading" secondItem="irM-2e-nR8" secondAttribute="leading" id="uAx-aM-8Jx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="irM-2e-nR8"/>
+                    </view>
+                    <connections>
+                        <outlet property="outPutImage" destination="j3X-G1-vMh" id="6gS-Bf-NNz"/>
+                        <outlet property="stakeView" destination="x8k-lk-DZP" id="LU4-yP-bif"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avA-pS-mAI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
