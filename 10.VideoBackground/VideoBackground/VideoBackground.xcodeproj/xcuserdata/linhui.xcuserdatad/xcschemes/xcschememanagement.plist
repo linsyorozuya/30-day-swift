@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ImageScrollerEffect.xcscheme</key>
+		<key>VideoBackground.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EC0F51FA1F60E13800580CB3</key>
+		<key>EC0618F11F652521004090CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC0F520E1F60E13800580CB3</key>
+		<key>EC0619051F652522004090CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC0F52191F60E13800580CB3</key>
+		<key>EC0619101F652522004090CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
